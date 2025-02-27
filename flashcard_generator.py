@@ -20,8 +20,17 @@ def generate_flashcards(text):
     try:
         model = genai.GenerativeModel("gemini-1.5-pro")
         response = model.generate_content(prompt)
-        print("Resposta bruta do Gemini:", response.text)  # Adiciona debug
-        flashcards = ast.literal_eval(response.text.strip())
+        print("Resposta bruta do Gemini:", response.text)  # Debug
+        
+        # Remove marcações de Markdown, se presentes
+        cleaned_response = response.text.strip()
+        if cleaned_response.startswith("```python"):
+            cleaned_response = cleaned_response.replace("```python", "").strip()
+        if cleaned_response.endswith("```"):
+            cleaned_response = cleaned_response.replace("```", "").strip()
+        
+        # Parseia a resposta limpa
+        flashcards = ast.literal_eval(cleaned_response)
         return flashcards
     except Exception as e:
         print(f"Erro ao gerar flashcards: {e}")
