@@ -1,11 +1,9 @@
 import google.generativeai as genai
 from dotenv import load_dotenv
 import os
+import ast
 
-# Carrega as variáveis do .env
 load_dotenv()
-
-# Pega a chave API do ambiente
 API_KEY = os.getenv("GEMINI_API_KEY")
 if not API_KEY:
     raise ValueError("GEMINI_API_KEY não encontrada no .env ou ambiente")
@@ -22,7 +20,7 @@ def generate_flashcards(text):
     try:
         model = genai.GenerativeModel("gemini-1.5-pro")
         response = model.generate_content(prompt)
-        import ast
+        print("Resposta bruta do Gemini:", response.text)  # Adiciona debug
         flashcards = ast.literal_eval(response.text.strip())
         return flashcards
     except Exception as e:
