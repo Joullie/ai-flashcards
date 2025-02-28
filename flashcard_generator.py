@@ -11,7 +11,7 @@ genai.configure(api_key=API_KEY)
 
 def generate_flashcards(text):
     prompt = (
-        "Analise o texto abaixo e gere 5 flashcards no formato "
+        "Analise o texto abaixo e gere 10 flashcards no formato "
         "'Pergunta: [pergunta clara e específica] Resposta: [resposta curta, mas com detalhes úteis]' "
         "com base em conceitos-chave, evitando repetições. Retorne como uma lista de dicionários Python "
         "(ex.: [{'Pergunta': '...', 'Resposta': '...'}, ...]):\n\n" + text
