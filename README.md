@@ -23,6 +23,10 @@ Este projeto é uma aplicação web construída com Streamlit que utiliza inteli
 -   **Beautiful Soup:** Biblioteca para extrair texto de páginas web.
 -   **Requests:** Biblioteca para fazer requisições HTTP.
 
+## Pendente:
+
+- Estilização adequada.
+
 ## Como Usar
 
 1.  **Clone o Repositório:**
