@@ -3,3 +3,5 @@ requests
 beautifulsoup4
 google-generativeai # Inclusion of Gemini API package.
 python-dotenv
+firebase-admin
+streamlit-tailwind
