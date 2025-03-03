@@ -32,7 +32,7 @@ Este projeto é uma aplicação web construída com Streamlit que utiliza inteli
 1.  **Clone o Repositório:**
 
     ```bash
-    git clone [https://github.com/seu-usuario/ai-flashcards.git](https://github.com/seu-usuario/ai-flashcards.git)
+    git clone [https://github.com/Joullie/ai-flashcards.git](https://github.com/seu-usuario/ai-flashcards.git)
     cd ai-flashcards
     ```
 
